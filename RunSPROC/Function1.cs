@@ -17,7 +17,7 @@ public static class RunStoredProcedure
 
     [FunctionName("RunStoredProcedure")]
     public static async Task<IActionResult> Run(
-        [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
+        [Microsoft.Azure.WebJobs.HttpTrigger(Microsoft.Azure.WebJobs.Extensions.Http.AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
         ILogger log)
     {
         log.LogInformation("C# HTTP trigger function processed a request.");
